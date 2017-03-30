@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 public class Contact: Object {
+  
+  public dynamic var id = 0
   public dynamic var firstName = ""
   public dynamic var lastName = ""
   public dynamic var phoneNumber = ""
@@ -19,6 +21,10 @@ public class Contact: Object {
   
   public var fullName: String {
     return "\(firstName) \(lastName)"
+  }
+  
+  override public static func primaryKey() -> String? {
+    return "id"
   }
 
 }
