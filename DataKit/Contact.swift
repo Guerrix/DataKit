@@ -9,11 +9,11 @@
 import Foundation
 import RealmSwift
 
-class Contact: Object {
-  dynamic var firstName = ""
-  dynamic var lastName = ""
-  dynamic var phoneNumber = ""
-  dynamic var age = 0
-  dynamic var address = ""
-  dynamic var owner: Group? // to-one relationships must be optional
+public class Contact: Object {
+  public dynamic var firstName = ""
+  public dynamic var lastName = ""
+  public dynamic var phoneNumber = ""
+  public dynamic var age = 0
+  public dynamic var address = ""
+  public dynamic var owner: Group? // to-one relationships must be optional
 }

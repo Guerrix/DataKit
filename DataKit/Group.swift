@@ -9,8 +9,8 @@
 import Foundation
 import RealmSwift
 
-class Group: Object {
-  dynamic var name = ""
-  let contacts = List<Contact>()
+public class Group: Object {
+  public dynamic var name = ""
+  public let contacts = List<Contact>()
 
 }
