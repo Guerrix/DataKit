@@ -16,4 +16,9 @@ public class Contact: Object {
   public dynamic var age = 0
   public dynamic var address = ""
   public dynamic var owner: Group? // to-one relationships must be optional
+  
+  public var fullName: String {
+    return "\(firstName) \(lastName)"
+  }
+
 }
