@@ -19,4 +19,12 @@ public extension Contact {
     }
   }
   
+  /// Delete record from database
+  public func delete() {
+    let realm = try! Realm()
+    try! realm.write {
+      realm.delete(self)
+    }
+  }
+  
 }
