@@ -55,8 +55,6 @@
 		D80A180F1E8C5B7400256A05 = {
 			isa = PBXGroup;
 			children = (
-				D80A182B1E8C5F9900256A05 /* Realm.framework.dSYM */,
-				D80A182C1E8C5F9900256A05 /* RealmSwift.framework.dSYM */,
 				D80A181B1E8C5B7400256A05 /* DataKit */,
 				D80A181A1E8C5B7400256A05 /* Products */,
 				D80A18241E8C5F5700256A05 /* Frameworks */,
@@ -83,6 +81,8 @@
 		D80A18241E8C5F5700256A05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D80A182B1E8C5F9900256A05 /* Realm.framework.dSYM */,
+				D80A182C1E8C5F9900256A05 /* RealmSwift.framework.dSYM */,
 				D80A18251E8C5F5700256A05 /* Realm.framework */,
 				D80A18261E8C5F5700256A05 /* RealmSwift.framework */,
 			);
