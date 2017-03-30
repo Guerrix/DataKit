@@ -12,6 +12,8 @@
 		D80A18281E8C5F5700256A05 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80A18261E8C5F5700256A05 /* RealmSwift.framework */; };
 		D80A182D1E8C5F9900256A05 /* Realm.framework.dSYM in Carthage dSYM files */ = {isa = PBXBuildFile; fileRef = D80A182B1E8C5F9900256A05 /* Realm.framework.dSYM */; };
 		D80A182E1E8C5F9900256A05 /* RealmSwift.framework.dSYM in Carthage dSYM files */ = {isa = PBXBuildFile; fileRef = D80A182C1E8C5F9900256A05 /* RealmSwift.framework.dSYM */; };
+		D896DCB11E8C926A00F238C2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB01E8C926A00F238C2 /* Contact.swift */; };
+		D896DCB31E8C930E00F238C2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB21E8C930E00F238C2 /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,8 @@
 		D80A18261E8C5F5700256A05 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D80A182B1E8C5F9900256A05 /* Realm.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Realm.framework.dSYM; path = Carthage/Build/iOS/Realm.framework.dSYM; sourceTree = "<group>"; };
 		D80A182C1E8C5F9900256A05 /* RealmSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RealmSwift.framework.dSYM; path = Carthage/Build/iOS/RealmSwift.framework.dSYM; sourceTree = "<group>"; };
+		D896DCB01E8C926A00F238C2 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		D896DCB21E8C930E00F238C2 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		D80A181B1E8C5B7400256A05 /* DataKit */ = {
 			isa = PBXGroup;
 			children = (
+				D896DCAE1E8C923B00F238C2 /* Models */,
 				D80A181C1E8C5B7400256A05 /* DataKit.h */,
 				D80A181D1E8C5B7400256A05 /* Info.plist */,
 			);
@@ -87,6 +92,15 @@
 				D80A18261E8C5F5700256A05 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D896DCAE1E8C923B00F238C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D896DCB01E8C926A00F238C2 /* Contact.swift */,
+				D896DCB21E8C930E00F238C2 /* Group.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +149,7 @@
 					D80A18181E8C5B7400256A05 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 742AQUF628;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -190,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D896DCB11E8C926A00F238C2 /* Contact.swift in Sources */,
+				D896DCB31E8C930E00F238C2 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +315,7 @@
 		D80A18221E8C5B7400256A05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 742AQUF628;
@@ -314,6 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DataKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -321,6 +340,7 @@
 		D80A18231E8C5B7400256A05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 742AQUF628;
