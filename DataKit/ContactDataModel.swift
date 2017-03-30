@@ -27,4 +27,10 @@ public extension Contact {
     }
   }
   
+  /// Get All Contacts from database
+  public static func getAllContacts() -> Results<Contact> {
+    let realm = try! Realm()
+    return realm.objects(Contact.self)
+  }
+  
 }
