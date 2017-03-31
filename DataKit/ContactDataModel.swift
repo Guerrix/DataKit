@@ -45,13 +45,18 @@ public extension Contact {
         }
     }
     
-    
-    /// Get All Contacts from database
+
+    /// Get All Contacts from database from a given group.
+    /// If group parameter is nil it will return all cotacts
     ///
+    /// - Parameter group: Group Class
     /// - Returns: Results<Contact> generic array for with Contact objects
-    public static func getAll() -> Results<Contact> {
+    public static func getAll(byGroup group: Group? = nil) -> Results<Contact> {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         let realm = try! Realm()
+        if group != nil {
+            return realm.objects(Contact.self).filter("group.id == \(group!.id)")
+        }
         return realm.objects(Contact.self)
     }
     
