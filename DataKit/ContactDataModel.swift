@@ -10,33 +10,30 @@ import Foundation
 import RealmSwift
 
 public extension Contact {
-    
+
     /// Persist or update record into database
     public func saveOrUpdate() {
         if id == 0 {
             self.id = Int(NSDate().timeIntervalSince1970) // Generate id from TimeStam
         }
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(self, update: true)
+
+        try! RealmManager.realm.write {
+            RealmManager.realm.add(self, update: true)
         }
     }
-    
+
     /// Delete record from database
     public func delete() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.delete(self)
+        try! RealmManager.realm.write {
+            RealmManager.realm.delete(self)
         }
     }
-    
-    
-    
+
+
     /// Removes Contct form it's current group
-    public func removeFromCurrentGroup(){
+    public func removeFromCurrentGroup() {
         if self.group != nil {
-            let realm = try! Realm()
-            try! realm.write {
+            try! RealmManager.realm.write {
                 if let contactIndex = self.group?.contacts.index(of: self) {
                     self.group?.contacts.remove(objectAtIndex: contactIndex)
                 }
@@ -44,7 +41,6 @@ public extension Contact {
             }
         }
     }
-    
 
     /// Get All Contacts from database from a given group.
     /// If group parameter is nil it will return all cotacts
@@ -52,18 +48,17 @@ public extension Contact {
     /// - Parameter group: Group Class
     /// - Returns: Results<Contact> generic array for with Contact objects
     public static func getAll(byGroup group: Group? = nil) -> Results<Contact> {
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        let realm = try! Realm()
         if group != nil {
-            return realm.objects(Contact.self).filter("group.id == \(group!.id)")
+            return RealmManager.realm.objects(Contact.self).filter("group.id == \(group!.id)")
         }
-        return realm.objects(Contact.self)
+        return RealmManager.realm.objects(Contact.self)
     }
-    
+
+    /// Get All Contacts from database without group
+    ///
+    /// - Returns: Results<Contact> generic array for with Contact objects
     public static func getAllWithoutGroup() -> Results<Contact> {
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        let realm = try! Realm()
-        return realm.objects(Contact.self).filter("group == nil")
+        return RealmManager.realm.objects(Contact.self).filter("group == nil")
     }
-    
+
 }

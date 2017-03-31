@@ -16,6 +16,7 @@
 		D896DCB31E8C930E00F238C2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB21E8C930E00F238C2 /* Group.swift */; };
 		D8A193121E8CD68600C42521 /* ContactDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193111E8CD68600C42521 /* ContactDataModel.swift */; };
 		D8FB9BDC1E8DBA6C00A1B2FA /* GroupDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB9BDB1E8DBA6C00A1B2FA /* GroupDataModel.swift */; };
+		D8FB9BE01E8DF5F900A1B2FA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB9BDF1E8DF5F900A1B2FA /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		D896DCB21E8C930E00F238C2 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D8A193111E8CD68600C42521 /* ContactDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataModel.swift; sourceTree = "<group>"; };
 		D8FB9BDB1E8DBA6C00A1B2FA /* GroupDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDataModel.swift; sourceTree = "<group>"; };
+		D8FB9BDF1E8DF5F900A1B2FA /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				D8A193111E8CD68600C42521 /* ContactDataModel.swift */,
 				D8FB9BDB1E8DBA6C00A1B2FA /* GroupDataModel.swift */,
+				D8FB9BDF1E8DF5F900A1B2FA /* RealmManager.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				D8A193121E8CD68600C42521 /* ContactDataModel.swift in Sources */,
 				D896DCB11E8C926A00F238C2 /* Contact.swift in Sources */,
+				D8FB9BE01E8DF5F900A1B2FA /* RealmManager.swift in Sources */,
 				D896DCB31E8C930E00F238C2 /* Group.swift in Sources */,
 				D8FB9BDC1E8DBA6C00A1B2FA /* GroupDataModel.swift in Sources */,
 			);

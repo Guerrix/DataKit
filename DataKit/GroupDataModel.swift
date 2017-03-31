@@ -17,20 +17,19 @@ public extension Group {
             self.id = Int(NSDate().timeIntervalSince1970) // Generate id from TimeStam
         }
         
-        let realm = try! Realm()
-        try! realm.write {
+        try! RealmManager.realm.write {
             for contact in self.contacts {
                 contact.group = self
             }
-            realm.add(self, update: true)
+            RealmManager.realm.add(self, update: true)
         }
     }
     
     /// Delete record from database
     public func delete() {
         let realm = try! Realm()
-        try! realm.write {
-            realm.delete(self)
+        try! RealmManager.realm.write {
+            RealmManager.realm.delete(self)
         }
     }
     
@@ -39,8 +38,7 @@ public extension Group {
     ///
     /// - Returns: Results<Group> generic array for with Group objects
     public static func getAll() -> Results<Group> {
-        let realm = try! Realm()
-        return realm.objects(Group.self)
+        return RealmManager.realm.objects(Group.self)
     }
     
 }
