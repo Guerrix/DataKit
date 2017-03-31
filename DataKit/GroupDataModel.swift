@@ -27,7 +27,6 @@ public extension Group {
     
     /// Delete record from database
     public func delete() {
-        let realm = try! Realm()
         try! RealmManager.realm.write {
             RealmManager.realm.delete(self)
         }
