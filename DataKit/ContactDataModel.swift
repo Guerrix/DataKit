@@ -31,6 +31,21 @@ public extension Contact {
     }
     
     
+    
+    /// Removes Contct form it's current group
+    public func removeFromCurrentGroup(){
+        if self.group != nil {
+            let realm = try! Realm()
+            try! realm.write {
+                if let contactIndex = self.group?.contacts.index(of: self) {
+                    self.group?.contacts.remove(objectAtIndex: contactIndex)
+                }
+                self.group = nil
+            }
+        }
+    }
+    
+    
     /// Get All Contacts from database
     ///
     /// - Returns: Results<Contact> generic array for with Contact objects
